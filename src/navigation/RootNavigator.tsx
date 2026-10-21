@@ -4,7 +4,13 @@ import WelcomeScreen from "../screens/WelcomeScreen";
 import LoginScreen from "../screens/LoginScreen";
 import AppStackNavigator from "./AppStackNavigator";
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  Welcome: undefined;
+  Login: undefined;
+  App: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RootNavigator() {
   return (
